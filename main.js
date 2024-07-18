@@ -1,8 +1,8 @@
 const express = require('express');
 const app = express();
-const port = 8000;
+const port = 3000;
 
-const API_CHII = '123456' || "default_key";
+const API_CHII = process.env.API_CHII || "default_key";
 
 app.get('/api', (req, res) => {
     const apiKey = req.query.api_chii;
